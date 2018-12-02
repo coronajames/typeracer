@@ -1,0 +1,40 @@
+<div class="row">
+	<div class="col-md-6">
+		<div class="all-views-highscore-header panel panel-default">
+			<div class="panel-heading table nav nav-tabs">
+				<span class="user-all-time-wpm record-header">Fastest Typists  | </span>
+				<span class="user-recent-wpm record-header">Recent Leaders  | </span>
+				<span class="user-total-races record-header">Total Races</span>
+			</div>
+			<table class="all-pages-show-scores table">
+				<% if (list.length !== 0) { %>
+					<tr>
+						<th>
+							#
+						</th>
+						<th>
+							User
+						</th>
+						<th>
+							<%= category == "races" ? "Total Races" : "WPM" %>
+						</th>
+					</tr>
+					<% _.each(list, function(racer, i) { %>
+						<tr class="hof-user" data-racer="<%= racer.user_id %>">
+							<td><%= i + 1 %></td>
+							<td><%- racer.username %></td>
+							<td><%= racer[category] %></td>
+						</th>
+					<% }) %>
+				<% } else { %>
+				<tr>
+				No race data to display.
+				</tr>
+				<% } %>
+			</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="user-modal"></div>

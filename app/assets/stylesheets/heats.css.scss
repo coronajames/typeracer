@@ -1,0 +1,69 @@
+// Place all the styles related to the Heats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#current-word {
+	color: green;
+	text-decoration: underline;
+}
+
+.finish_line {
+	border-right: 8px solid red;
+	height: 60px;
+}
+
+.finished {
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+.raceTracks {
+	background-color: gray;
+	border-bottom: 4px dashed black;
+	border-top: 4px dashed black;
+//	outline: 4px solid white;
+	margin-bottom: 5px;
+}
+
+.racer {
+	margin-right:0px;
+	padding-left: 30px;
+	display: inline-block;
+}
+
+.racer_name {
+	color: white;
+}
+
+.race_wpm {
+	color: white;
+	float: right;
+	display: inline;
+	margin: 10px;
+	display: inline-block;
+}
+
+.race_text {
+	background-color: white;
+	font-size: 17px;
+	border: 5px solid gray;
+	border-style: outset;
+	padding: 10px;
+	border-radius: 10px;
+	-moz-border-radius: 35px;
+}
+
+.hof-user:hover, .top-user:hover {
+	background-color: lightblue;
+}
+
+#count-down {
+	font-size: 20px;
+	text-align: center;
+	border: 2px solid black;
+}
+
+#waiting {
+	padding: 30px;
+	font-size: 20px;
+}

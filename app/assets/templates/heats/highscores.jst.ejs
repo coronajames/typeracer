@@ -1,0 +1,58 @@
+<div class="text-info well well-lg">
+  You just wrote a passage <%= race.get("source") %>.
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<% if (heat_stat.slowpoke) { %>
+			Nice try, but you didn't finish in time.
+		<% } else { %>
+			<table class="current-race-scores table">
+				<tr>
+					<td>Your speed:</td><td><%= heat_stat.wpm %> wpm</td>
+				</tr>
+				<tr>
+					<td>Time:</td><td><%= heat_stat.time %></td>
+				</tr>
+				<tr>
+					<td>Accuracy:</td><td><%= heat_stat.wpm_percentile %></td>
+				</tr>
+			</table>
+	<% } %>
+	</div>
+
+	<div class="col-md-6">
+		<button class="start-new-game btn btn-info">Race Again?</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="highscore-header panel-heading table">
+				<span class="race-all-time-scores">Fastest Typists |</span>
+				<span class="race-personal-scores">My Scores</span>
+			</div>
+
+			<table class="show-scores table">
+				<% if (list.length !== 0) { %>
+					<tr>
+						<th>#</th><th>User</th><th>Speed</th>
+					</tr>
+					<% list.forEach(function(score, i) { %>
+					<tr class="top-user" data-racer="<%- score.user_id %>">
+						<td><%= i + 1 %></td>
+						<td><%- score.username %></td>
+						<td><%= score.wpm_avg %> wpm</td>
+					<% }) %>
+				<% } else { %>
+					<tr>
+					You have to race more and be signed in to see your top scores!
+					</tr>
+				<% } %>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="user-modal"></div>

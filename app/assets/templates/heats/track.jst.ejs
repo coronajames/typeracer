@@ -1,0 +1,20 @@
+<div class="row">
+	<div class="col-md-10 finish_line">
+		<table class="racer"
+		       data-racer-id="<%= racer.racer_id %>">
+			<tr>
+				<td class="racer_name">
+					<%- racer.racer_name.slice(0,5) %>
+				</td>
+
+				<td class="racer_car">
+					<img alt="GOGOGO" src="<%= racer.racer_img %>">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-md-2">
+		<span class="race_wpm">0 WPM</span>
+		<br>
+	</div>
+</div>
